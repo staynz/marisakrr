@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Love Story ❤️</title>
+    <style>
+        body {
+            text-align: center;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            color: white;
+        }
+        h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8);
+        }
+        p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .heart {
+            color: red;
+            font-size: 3rem;
+            animation: heartbeat 1s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: pink;
+        }
+        img {
+            width: 200px;
+            height: auto;
+            border-radius: 20px;
+            margin-top: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>To My Love 💖</h1>
+    <p id="message">You are the most beautiful part of my life, my sunshine, my happiness, my everything! 🌹</p>
+    <div class="heart">❤️</div>
+    
+    <!-- Image Section -->
+    <img id="loveImage" src="your-image-url-here" alt="Our Beautiful Memory">
+    
+    <button onclick="changeMessage()">Click for More Love</button>
+    <button onclick="changeImage()">See Another Memory</button>
+
+    <audio autoplay loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        const messages = [
+            "You are my heart and my soul! 💞",
+            "Every moment with you is magical! ✨",
+            "Your love makes my world shine brighter! 🌟",
+            "I will love you forever and always! 😘"
+        ];
+        
+        function changeMessage() {
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById('message').innerText = randomMessage;
+        }
+
+        const images = [
+            "your-image-url-1.jpg",
+            "your-image-url-2.jpg",
+            "your-image-url-3.jpg"
+        ];
+        
+        function changeImage() {
+            const randomImage = images[Math.floor(Math.random() * images.length)];
+            document.getElementById('loveImage').src = randomImage;
+        }
+    </script>
+</body>
+</html>
